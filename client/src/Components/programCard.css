@@ -1,0 +1,17 @@
+.class__card{
+    padding: 2% 0 ;
+    border: 1px solid black;
+    transition-duration: 300ms;
+    margin: 1.5% ;
+    text-align: center;
+}
+
+.class__card:hover{
+    transform: scale(1.1);
+}
+
+hr{
+    width:70%;
+    text-align:center;
+    margin-left:15%;
+}

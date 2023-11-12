@@ -1,0 +1,11 @@
+.search__bar{
+    border-radius: 30px 30px 0px 0px;
+    background-color: white;
+    padding:50px 0;
+    margin-top: -6%;
+}
+
+.search__section{
+    padding:20px;
+    text-align: center;
+}
