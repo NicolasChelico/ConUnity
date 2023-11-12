@@ -14,6 +14,7 @@ const SpecificProgram = props => {
            <ul>
                 {props.map((p) => {
                     return <li className="side__nav__options"> {p.child}</li>
+                    // I dont know if this will work
                 })}
            </ul>
         </div>
