@@ -18,7 +18,7 @@ const Navbar = (props) => {
         <div className="">
             <nav className="row nav__main">
                 <div className="col-lg-4 open__drawer__button">
-                    <button onClick={props.onClick}><SlMenu size={35}/></button>
+                    <button className="btn open__drawer" onClick={props.onClick}><SlMenu size={35}/></button>
                 </div>
                 <div className="col-lg-4">
                     <Link to="/"><img src ="" alt="logo"/></Link>                        

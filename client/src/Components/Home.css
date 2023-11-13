@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Montserrat:wght@100;400;700&family=Poppins&family=Roboto+Mono&family=Roboto:wght@900&family=Source+Sans+3&family=Ubuntu:wght@700&display=swap');
+
 .background__hero{
     width: 100%;
-    height: 500px;
-    background-image: url('../pictures/hero2.jpg');
+    height: 700px;
+    background-image: url('https://www.concordia.ca/content/concordia/en/maps/buildings/mb/_jcr_content/content-main/image.img.jpg/1668707772058.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.program__holder h1{
+    margin:5%;
 }
 

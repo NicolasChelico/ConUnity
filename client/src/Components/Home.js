@@ -5,9 +5,9 @@ import './Home.css'
 import SideDrawer from "./sideDrawer";
 import Search from "./search";
 import ProgramCard from "./programCard";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-
     const [isDrawerOpen , setDrawerOpen] = useState(false);
     const [programs, setPrograms] = useState([])
 
@@ -37,13 +37,15 @@ const Home = () => {
             <div className="background__hero">
                 <Navbar onClick = {openDrawer} />
                 {isDrawerOpen && (
-                    <SideDrawer show={isDrawerOpen} onClick={closeDrawer} />
+                    <SideDrawer show={isDrawerOpen} onClick={closeDrawer} title={"Programs"}>
+                        {programs.map(p=> {return(<li>{p.programName}</li>)})}
+                    </SideDrawer>
                 )}
+                    <Search/>
             </div>
-            <div className = "container">
-
-                <Search/>
+            <div className = "container main__area"> 
                 <div className="row justify-content-center program__holder">
+                    <h1>Programs</h1>
                     {
                         programs.map((p) => {
                             return <ProgramCard programName = {p.programName}/>

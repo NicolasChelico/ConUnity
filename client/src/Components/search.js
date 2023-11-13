@@ -1,14 +1,18 @@
 import React from "react";
 import './search.css'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const Search = () => {
 
     return(
-        <div className = "search__bar">
-            <div className="search__section">
-                <input type ="text" /> <button type="submit">Search</button>
+        <>
+            <div>
+                
             </div>
-        </div>
+
+
+        </>
     )
 }
 

@@ -2,6 +2,7 @@ import { React , useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./Components/Home.js"
 import './App.css';
+import { Footer } from './Components/footer.js';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 
           </Routes> 
         </BrowserRouter>
+        <Footer/>
     </div>
   );
 }

@@ -8,13 +8,10 @@ const SideDrawer = (props) => {
     return(
 
         <div className="side__drawer">
-            <div className ="close__button__drawer"><button onClick={props.onClick}><IoClose size={35}/></button>  </div>
+            <div className ="close__button__drawer"><button className="btn" onClick={props.onClick}><IoClose size={35}/></button>  </div>
+                <h5>{props.title}</h5>
             <ul>
-                <li>Subject 1</li>
-                <li>Subject 1</li>
-                <li>Subject 1</li>
-                <li>Subject 1</li>
-                <li>Subject 1</li>
+               {props.children}
             </ul>
         </div>
     )
