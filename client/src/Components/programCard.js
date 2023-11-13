@@ -18,7 +18,7 @@ const ProgramCard = props => {
         <Card style={ style } className="class__card">
             <Card.Body >
                 <Card.Title style={{fontSize:'35px'}}>{props.programName}</Card.Title> 
-                <Link to ="/program:id"><Button variant="primary">View Courses</Button></Link>
+                <Link to ={`/Program/${props.programName}/${props.programID}`}><Button variant="primary">View Courses</Button></Link>
             </Card.Body>
         </Card>
     </>

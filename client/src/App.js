@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./Components/Home.js"
 import './App.css';
 import { Footer } from './Components/footer.js';
+import SpecificProgram from './Components/specificProgram.js';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <BrowserRouter>
           <Routes>
               <Route path="/" element={<Home />}/>
+              <Route path="/Program/:id" element={<SpecificProgram />}/>
 
           </Routes> 
         </BrowserRouter>

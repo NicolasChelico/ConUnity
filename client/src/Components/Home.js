@@ -6,6 +6,7 @@ import SideDrawer from "./sideDrawer";
 import Search from "./search";
 import ProgramCard from "./programCard";
 import { Link } from 'react-router-dom';
+import SpecificProgram from './specificProgram'
 
 const Home = () => {
     const [isDrawerOpen , setDrawerOpen] = useState(false);
@@ -48,7 +49,7 @@ const Home = () => {
                     <h1>Programs</h1>
                     {
                         programs.map((p) => {
-                            return <ProgramCard programName = {p.programName}/>
+                            return <ProgramCard programName = {p.programName} programID = {p.programID}/>
                         })
                     }
                     {/* <ProgramCard programName="Industrial Engineering"/> */}

@@ -28,6 +28,15 @@ app.get("/Home", (req,res) => {
     })
 })
 
+app.get("/Program/:id" , (req,res) => {
+    const pID = req.params.id;
+    const q =" SELECT p.programName, c.courseName, c.courseID , c.description , c.courseCode, c.credits FROM Program p JOIN MadeUp mu ON p.programID = mu.programID JOIN Course c ON c.courseID = mu.courseID WHERE p.programID = " + pID + " ORDER BY c.courseID ASC";
+    db.query(q, (err,data) => {
+        if(err) return console.log(err)
+        return (res.json(data));
+    })
+})
+
 
 app.listen(8801, () => {
     console.log("Connected to the backend")
