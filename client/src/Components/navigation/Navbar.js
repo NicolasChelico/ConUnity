@@ -4,7 +4,7 @@ import { SlMenu } from "react-icons/sl";
 import { FaCircleUser } from "react-icons/fa6";
 
 import './Navbar.css';
-import SideDrawer from "./sideDrawer";
+import SideDrawer from "../sideDrawer";
 const Navbar = (props) => {
     const [sideDrawer, setSideDrawer] = useState(false)
 

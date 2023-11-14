@@ -1,6 +1,6 @@
 import { React , useState, useEffect } from 'react';
 import axios from "axios";
-import Navbar from "./Navbar";
+import Navbar from "./navigation/Navbar";
 import './Home.css'
 import SideDrawer from "./sideDrawer";
 import Search from "./search";
@@ -36,12 +36,7 @@ const Home = () => {
     return(
         <>
             <div className="background__hero">
-                {/* <Navbar onClick = {openDrawer} />
-                {isDrawerOpen && (
-                    <SideDrawer show={isDrawerOpen} onClick={closeDrawer} title={"Programs"}>
-                        {programs.map(p=> {return(<li>{p.programName}</li>)})}
-                    </SideDrawer>
-                )} */}
+
                     <Search/>
             </div>
             <div className = "container main__area"> 

@@ -3,9 +3,8 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import './MainNavigation.css';
 import axios from "axios";
 import Navbar from "./Navbar";
-import SideDrawer from "./sideDrawer";
-import Home from "./Home";
-import { Footer } from "./footer";
+import SideDrawer from "../sideDrawer";
+
 import MainHeader from "./MainHeader";
 
 

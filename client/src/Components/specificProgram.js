@@ -2,18 +2,19 @@ import {React , useState, useEffect } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import './specificProgram.css';
+import ProgramList from "./program-list/programList";
 
 
 const SpecificProgram = () => {
 
     const [classList, setClassList] = useState([])
+   
     const location = useLocation()
     const { programName } = location.state
    
  
     const {id} = useParams();
 
-    console.log(programName)
     useEffect(() => {
         const fetchClasses = async () =>{
             try{
@@ -28,30 +29,29 @@ const SpecificProgram = () => {
     }
     , [id])
     
+    const twoHundred = classList.filter((o) => {
+        return o.courseCode.charAt(5) === '2';
+    })
+    const threeHundred = classList.filter((o) => {
+        return o.courseCode.charAt(5) === '3'
+    })
+    const fourHundred = classList.filter((o) => {
+        return o.courseCode.charAt(5) === '4'
+    })
+
+    console.log(twoHundred)
 
     return(
         <div className="container">
-            <div style={{marginTop:'100px'}}>
+            <div style={{margin:'100px 0'}}>
             <h1> {programName} </h1>
             </div>
-            
-        <div>
-            <ul>
-              {
-                
-                 classList.map((c) => {
-                     return (
-                        <div key={c.courseID}>
-                            <Link to ={`/Program/${id}/${c.courseID}`}>
-                                <li> { c.courseCode } </li>
-                            </Link>
-                        </div>
-                     );
-                    })
-            }
-            </ul>
-        </div>
-           
+        <div className="row">
+                <ProgramList course={twoHundred} title="Two Hundreds" id = {id}/>
+                <ProgramList course={threeHundred} title="Three Hundreds" id = {id}/>
+                <ProgramList course={fourHundred} title="Four Hundreds" id = {id}/>
+       
+        </div>    
         </div>
     )
 
