@@ -1,4 +1,12 @@
 
 .nav__main{
-    padding: 4% 0;
+    background-color:#800020 ;
+    box-shadow: rgb(-20, -20, -20);
+    padding: 2% 0;
+}
+
+.nav__main .open__drawer{
+    color:white;
+    position: absolute;
+    left: 2rem;
 }

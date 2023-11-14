@@ -36,12 +36,12 @@ const Home = () => {
     return(
         <>
             <div className="background__hero">
-                <Navbar onClick = {openDrawer} />
+                {/* <Navbar onClick = {openDrawer} />
                 {isDrawerOpen && (
                     <SideDrawer show={isDrawerOpen} onClick={closeDrawer} title={"Programs"}>
                         {programs.map(p=> {return(<li>{p.programName}</li>)})}
                     </SideDrawer>
-                )}
+                )} */}
                     <Search/>
             </div>
             <div className = "container main__area"> 

@@ -28,6 +28,15 @@ app.get("/Home", (req,res) => {
     })
 })
 
+app.get("/Main", (req,res) => {
+    const q = "SELECT * FROM Program"
+
+    db.query(q, (err, data) => {
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
 app.get("/Program/:id" , (req,res) => {
     const pID = req.params.id;
     const q =" SELECT p.programName, c.courseName, c.courseID , c.description , c.courseCode, c.credits FROM Program p JOIN MadeUp mu ON p.programID = mu.programID JOIN Course c ON c.courseID = mu.courseID WHERE p.programID = " + pID + " ORDER BY c.courseID ASC";

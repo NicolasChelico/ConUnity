@@ -3,4 +3,10 @@
     padding:50px;
     background-color: #800020;
     color:white;
+  
+    position: relative;
+
+    /* negative value of footer height */
+    height: 180px;
+    clear: both;
 }
