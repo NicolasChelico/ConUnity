@@ -1,16 +1,19 @@
 import {React , useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import './specificProgram.css';
 
 
-const SpecificProgram = props => {
+const SpecificProgram = () => {
 
     const [classList, setClassList] = useState([])
+    const location = useLocation()
+    const { programName } = location.state
    
  
     const {id} = useParams();
-    
+
+    console.log(programName)
     useEffect(() => {
         const fetchClasses = async () =>{
             try{
@@ -25,11 +28,11 @@ const SpecificProgram = props => {
     }
     , [id])
     
-console.log(classList[0])
+
     return(
         <div className="container">
             <div style={{marginTop:'100px'}}>
-            <h1>  </h1>
+            <h1> {programName} </h1>
             </div>
             
         <div>

@@ -21,7 +21,7 @@ const MainNavigation = (props) => {
             try{
                 const res = await axios.get("http://localhost:8801/Main")
                 setPrograms(res.data)
-                // console.log(res.data)
+                
             }catch(err){
                 console.log(err)
             }
@@ -47,7 +47,7 @@ const MainNavigation = (props) => {
                 <SideDrawer show={isDrawerOpen} onClick={closeDrawer} title={"Programs"}>
                     {programs.map(p=> {return(
                     <div>
-                            <Link to ={`/Program/${p.programID}`} onClick={closeDrawer}>
+                            <Link to ={`/Program/${p.programID}`} onClick={closeDrawer} state={{programName: p.programName}}>
                                 <li className="program__list">{p.programName}</li>
                             </Link>
                     </div>
