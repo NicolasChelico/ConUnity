@@ -3,6 +3,7 @@ import { Link, useParams} from 'react-router-dom';
 import axios from "axios";
 
 import './courseReview.css'
+import ReviewCard from "./dashboard/reviewCard";
 
 const CourseReview = (props) => {
     const {courseID}  = useParams()
@@ -34,12 +35,23 @@ const CourseReview = (props) => {
 
     console.log(courseID)
     return(
-        <div className="container">
-        <div className="top__section"> 
+        <div className="row top__section" >
+            <div className="courses__hero">
+
+            </div>
+            
+        {/* <div className="top__section"> 
             This is going to be to review a class ! {courseID} 
         </div>
         <div className="add__review__button">
             <button onClick={() => {loggedIn ? setLoggedIn(false) : setLoggedIn(true)}}>ADD REVIEW</button>
+        </div> */}
+        <div className="col-lg-5 dashboard__section">
+            <h1 className="course__title">Course Name for: {courseID}</h1>
+            <ReviewCard courseID= {courseID}/>
+        </div>
+        <div className="col-lg-7">
+            <h1 className="review__title"> Reviews </h1>
         </div>
        </div>
     )

@@ -49,8 +49,7 @@ const SpecificProgram = () => {
         <div className="row">
                 <ProgramList course={twoHundred} title="Two Hundreds" id = {id}/>
                 <ProgramList course={threeHundred} title="Three Hundreds" id = {id}/>
-                <ProgramList course={fourHundred} title="Four Hundreds" id = {id}/>
-       
+                <ProgramList course={fourHundred} title="Four Hundreds" id = {id}/> 
         </div>    
         </div>
     )
