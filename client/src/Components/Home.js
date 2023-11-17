@@ -7,6 +7,7 @@ import Search from "./search";
 import ProgramCard from "./programCard";
 import { Link } from 'react-router-dom';
 import SpecificProgram from './specificProgram'
+import UserReview from './reviews/userReview';
 
 const Home = () => {
     const [isDrawerOpen , setDrawerOpen] = useState(false);
@@ -48,6 +49,7 @@ const Home = () => {
                         })
                     }
                     {/* <ProgramCard programName="Industrial Engineering"/> */}
+                    
                 </div>
             </div> 
         

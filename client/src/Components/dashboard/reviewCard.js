@@ -7,21 +7,23 @@ const ReviewCard = props => {
 
 
     return (
-        <div className="col-lg-5 dashboard__main">
-            
-        <div> 
-            <h4>Course Score for {props.courseID}</h4>
-                <h4>{props.score}</h4> 
-                <span>/5</span>
-                <span>{props.totalReview} Reviews</span>
-                <hr></hr>
+        <div className="row dashboard__main">    
+            <div className="col-lg-6"> 
+                <h1>Course Name : {props.courseID}</h1>
             </div>
-            <div>
-               <ScoringSection 
-                    examScore={props.examScore} 
-                    assignmentScore={props.assignmentScore} 
-                    overallScore={props.overallScore}
-            />       
+            <div className="col-lg-6 total__reviews">
+                <h4>{props.totalRevies} reviews <span className="review__button"><button className="btn review__me"> Review me!</button></span></h4> 
+            </div>
+            <div className="col-lg-6">
+                
+            </div>
+            <hr></hr>
+            <div className="col-lg-6">
+                <ScoringSection 
+                        examScore={props.examScore} 
+                        assignmentScore={props.assignmentScore} 
+                        overallScore={props.overallScore}
+                />       
             </div>
             
            

@@ -1,27 +1,17 @@
 import React from "react";
 
 import './scoringSection.css';
+import ScoreRow from "./scoreRow";
 
 const ScoringSection = props => {
 
 
     return(
-        <div>
-            <div>
-                <div>      
-                    <span>Exams  <span> {props.examScore} /5 </span></span>
-                </div>
-            </div>
-            <div>
-                <div>      
-                    <span>Assignments <span> {props.assignmentScore} /5 </span></span>
-                </div>
-            </div>
-            <div>
-                <div>      
-                    <span>Overall <span> {props.overallScore} /5 </span></span>
-                </div>
-            </div>
+        <div className="row">
+            <ScoreRow title={'Exams: '} score={props.examScore}/>
+            <ScoreRow title={'Assignments: '} score={props.assignmentScore}/>
+            <ScoreRow title ={'Overall: '} score ={props.overallScore} />
+   
         </div>
     )
 }

@@ -1,5 +1,17 @@
 .dashboard__main{
     width:100%;
-    line-height:5rem;
-    border: 1px solid black;
+    line-height:2rem;
+}
+
+.total__reviews{
+    text-align:start;
+    
+}
+.review__button{
+    text-align: right;
+
+}
+.review__me{
+    background-color: #e15600;
+    color:white;
 }

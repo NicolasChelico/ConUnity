@@ -1,0 +1,16 @@
+.score__title{
+    font-size: 30px;
+    margin:20px;
+}
+
+.score__number{
+    background-color: black;
+    color:white;
+    padding: 30px 40px;
+    z-index: 5;
+    margin-left:50px;
+}
+
+.holder__row{  
+    padding:25px;
+}

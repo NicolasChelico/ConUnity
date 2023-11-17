@@ -5,6 +5,8 @@ import axios from "axios";
 import './courseReview.css'
 import ReviewCard from "./dashboard/reviewCard";
 
+import UserReview from "./reviews/userReview";
+
 const CourseReview = (props) => {
     const {courseID}  = useParams()
     const [reviews, setReviews] = ([]);
@@ -46,12 +48,18 @@ const CourseReview = (props) => {
         <div className="add__review__button">
             <button onClick={() => {loggedIn ? setLoggedIn(false) : setLoggedIn(true)}}>ADD REVIEW</button>
         </div> */}
-        <div className="col-lg-5 dashboard__section">
-            <h1 className="course__title">Course Name for: {courseID}</h1>
+        <div className="row justify-content-center">
+        <div className="col-lg-10 justify-content-center dashboard__section">
             <ReviewCard courseID= {courseID}/>
+           
         </div>
-        <div className="col-lg-7">
-            <h1 className="review__title"> Reviews </h1>
+        <div className="col-lg-8">
+            <h1 className="review__title"> Reviews </h1><hr></hr>
+            <UserReview  date={'2023-09-11'} UserReview={'wgrlbwqlgbfwengfowqngibwu iowqgrbiqjwrengko wonqegbqrweigniwng wgeqorn;qrewgo; '}/>
+        </div>
+        
+        </div>
+        <div>
         </div>
        </div>
     )

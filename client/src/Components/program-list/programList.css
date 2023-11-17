@@ -4,9 +4,10 @@ a{
 }
 
 .list__holder{
-   
+   background-color: #eee;
     color:black;
     text-decoration: none;
+    padding:50px ;
 }
 
 .list__holder  li {

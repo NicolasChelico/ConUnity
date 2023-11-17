@@ -6,23 +6,36 @@
     z-index: 100;
     height: 100vh;
     width: 20%;
-    background: white;
+    background-color: #eee;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
+.side__drawer h5{
+    text-align: center;
+    margin:10% 0;
+}
 .side__drawer ul li{
+
     text-decoration: none;
-    line-height: 60px;
+    line-height: 40px;
     list-style: none;
 }
 
 .side__drawer ul li:hover{
     text-decoration:underline;
-    background-color: white;
+    background-color: #eee;
     color:black
 }
 
 .close__button__drawer{
     text-align:right;
-    margin:20px 20px 0 0;
+    padding:10px 10px 0 0;
+    background-color: black;
+    color:white;
+}
+
+.nav__top{
+    padding:10px 0;
+    background-color: black;
+    color:white;
 }
