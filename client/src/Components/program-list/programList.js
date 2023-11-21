@@ -4,8 +4,6 @@ import './programList.css'
 
 const ProgramList = props => {
 
-    console.log("this is from program list ",  props.courseID)
-    console.log(props.courseID)
     
     return(
 
@@ -16,7 +14,7 @@ const ProgramList = props => {
              props.course.map((c) => {
                  return (  
                         <div key={props.course.courseID}>
-                            <Link to ={`/Program/${props.id}/${c.courseID}`}>
+                            <Link to ={`/Program/${props.id}/${c.courseID}`} state={{courseCode: c.courseCode}}>
                                 <li> { c.courseCode } </li>
                             </Link>
                         </div> 

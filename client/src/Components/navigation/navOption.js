@@ -11,7 +11,7 @@ const NavOption = (props) => {
         <div>
             <NavLink to={props.trajectory}>
                 <li>      
-                    <span className="nav__icon"> {props.action} {props.children}</span>
+                    <span className="nav__icon"> {props.children} {props.action} </span>
                 </li>
             </NavLink>
         </div>

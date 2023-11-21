@@ -41,9 +41,8 @@ const MainNavigation = (props) => {
         setDrawerOpen(true)
     }
 
-
     return (
-      
+    
         <>
         <MainHeader>
             <Navbar onClick = {openDrawer} />
@@ -57,7 +56,7 @@ const MainNavigation = (props) => {
                     </NavOption>
                     <div>
                     <NavOption trajectory={'/'} action={"View Programs"}>
-                        <RiArrowDropDownLine onClick={() => setProgramsShowing(!programsShowing)}/>
+                        <RiArrowDropDownLine onClick={() => setProgramsShowing(!programsShowing)} size={30}/>
                     </NavOption>
                     
                     { programsShowing && (programs.map(p=> {return(
@@ -65,7 +64,6 @@ const MainNavigation = (props) => {
                             <Link to ={`/Program/${p.programID}`} onClick={closeDrawer} state={{programName: p.programName}}>
                                 <li className="program__list">{p.programName}</li>
                             </Link>
-                    
                     )}))}
                     </div>
 

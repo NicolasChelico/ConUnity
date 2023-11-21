@@ -1,8 +1,32 @@
-
-.user__card{
-    height:400px;
+.user__card {
+    height: 275px;
     border: 2px solid black;
-    padding-top:25px;
-    border-radius: 10px 10px 10px;
-}
-
+    padding-top: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Added margin to the bottom of user__card */
+  }
+  
+  .grading__score,
+  .review__section,
+  .rating__section {
+    margin-bottom: 10px;
+  }
+  
+  .grading__div {
+    text-align: center;
+  }
+  
+  .grading__score p {
+    display: inline-block;
+    margin: 0 10px; /* Adjusted margin for paragraphs within grading__score */
+  }
+  
+  .rating__section {
+    text-align: center;
+  }
+  
+  .approve__buttons button {
+    display: inline-block;
+    margin: 0 10px; /* Adjusted margin for buttons within approve__buttons */
+  }
+  

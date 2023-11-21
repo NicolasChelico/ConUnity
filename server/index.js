@@ -49,7 +49,7 @@ app.get("/Program/:id" , (req,res) => {
 // Gets the reviews for each classes
 app.get("/Program/:id/:courseID" , (req, res) => {
     const courseID = req.params.courseID;
-    const q = ""
+    const q = "SELECT c.courseID, c.courseName, c.description, r.review, r.date, r.grade, r.examRating,r.contentRating,r.assRating, r.reviewID FROM Course c JOIN Review r ON r.courseID = c.courseID WHERE c.courseID = " + courseID;
     db.query(q, (err,data) => {
         if(err) return console.log(err)
         return (res.json(data))
