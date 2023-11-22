@@ -56,6 +56,23 @@ app.get("/Program/:id/:courseID" , (req, res) => {
     })
 })
 
+app.post("/Review/:courseCode/:courseID" , (req,res) => {
+    const q = "INSERT INTO Review (`review`,`date`,`courseID`,`grade`,`examRating`,`contentRating`,`assRating`) VALUES (?)";
+    const values = [
+        req.body.review,
+        req.body.date,
+        req.body.courseID,
+        req.body.grade,
+        req.body.examRating,
+        req.body.contentRating,
+        req.body.assRating
+    ]
+    db.query(q, [values], (err,data) => {
+        if(err) return res.json(err)
+        return res.json("Review was successfully added")
+    });
+})
+
 app.listen(8801, () => {
     console.log("Connected to the backend")
 })

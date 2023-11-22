@@ -38,9 +38,6 @@ const CourseReview = (props) => {
 
 
 
-    
-
-   
     return(
         <div className="row top__section" >
             <div className="courses__hero">
@@ -50,13 +47,20 @@ const CourseReview = (props) => {
         <div className="row justify-content-center">
         <div className="col-lg-10 justify-content-center dashboard__section">
             <ReviewCard 
-            courseID= {courseID}
-            courseCode={courseCode}
-            totalReviews={review.length}
+                courseID= {courseID}
+                courseCode={courseCode}
+                totalReviews={review.length}
             />
         </div>
         <div className="col-lg-8">
             <h1 className="review__title"> Reviews </h1><hr></hr>
+            {
+                review.length === 0 && (
+                 
+                        <div><h5>No reviews done yet.. be the first!</h5></div>
+                    
+                ) 
+            }
             {
                     review.map((rev,id) => {
                        return( 

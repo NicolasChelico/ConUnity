@@ -48,14 +48,14 @@ const MainNavigation = (props) => {
             <Navbar onClick = {openDrawer} />
             {isDrawerOpen && (
                 <SideDrawer show={isDrawerOpen} onClick={closeDrawer} title={"Programs"}>
-                    <NavOption trajectory={'/'} action={"Home"} >
+                    <NavOption trajectory={'/'} action={"Home"} onClick={closeDrawer}>
                             <FaHome />
                     </NavOption>
-                    <NavOption trajectory={'/'} action={"Write Review"}>
+                    <NavOption trajectory={'/'} action={"Write Review"} onClick={closeDrawer}>
                             <MdOutlineRateReview />
                     </NavOption>
                     <div>
-                    <NavOption trajectory={'/'} action={"View Programs"}>
+                    <NavOption trajectory={'/'} action={"View Programs"} onClick={closeDrawer}>
                         <RiArrowDropDownLine onClick={() => setProgramsShowing(!programsShowing)} size={30}/>
                     </NavOption>
                     

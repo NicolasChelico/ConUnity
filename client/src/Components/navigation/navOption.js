@@ -10,7 +10,7 @@ const NavOption = (props) => {
     return(
         <div>
             <NavLink to={props.trajectory}>
-                <li>      
+                <li onClick={props.onClick}>      
                     <span className="nav__icon"> {props.children} {props.action} </span>
                 </li>
             </NavLink>

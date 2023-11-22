@@ -1,0 +1,33 @@
+.form {
+    width: 500px; /* Adjust the width as needed */
+    margin: auto; /* Center the form */
+    margin-top:10%;
+  }
+  
+  .form input, .form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; /* Adjust the margin as needed for spacing between inputs */
+  }
+  
+  .submit__button{
+    background-color: black;
+    width:100%;
+    color: white;
+  }
+
+  .class__title{
+    text-align: center;
+    padding:2%;
+    margin-bottom: 2%;
+    color:white;
+    background-color: #912338;
+  }
+
+  .form__card{
+    text-align:center;
+    width:38%;
+    padding:1%;
+    background-color: white;
+    margin:auto;
+  }
