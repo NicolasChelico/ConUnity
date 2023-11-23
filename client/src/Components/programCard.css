@@ -1,11 +1,12 @@
 .class__card{
     padding: 2% 0 ;
-    border: 1px solid black;
+    border: 1px solid #eee;
     transition-duration: 300ms;
     margin: 1.5% ;
     text-align: center;
-    background-color: #912338;
-    color: white;
+    /* background-color: #912338; */
+    background-color: #eeee;
+    color:  #912338;
     box-shadow: 0 5px 5px 5px rgba(0,0,0,0.3);
 }
 

@@ -5,22 +5,22 @@ import './specificProgram.css';
 import ProgramList from "./program-list/programList";
 
 
-const SpecificProgram = () => {
+const SpecificProgram = (props) => {
 
     const [classList, setClassList] = useState([])
    
     const location = useLocation()
+    
     const { programName } = location.state
-   
- 
+   const p = props.program;
+   console.log(p)
     const {id} = useParams();
 
     useEffect(() => {
         const fetchClasses = async () =>{
             try{
                 const res = await axios.get(`http://localhost:8801/Program/${id}`)
-                setClassList(res.data)     
-                console.log(res.data)
+                setClassList(res.data) 
             }catch(err){
                 console.log(err)
             }
@@ -29,6 +29,7 @@ const SpecificProgram = () => {
     }
     , [id])
     
+
     const twoHundred = classList.filter((o) => {
         return o.courseCode.charAt(5) === '2';
     })

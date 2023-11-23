@@ -13,8 +13,8 @@ const ProgramList = props => {
           {
              props.course.map((c) => {
                  return (  
-                        <div key={props.course.courseID}>
-                            <Link to ={`/Program/${props.id}/${c.courseID}`} state={{courseCode: c.courseCode}}>
+                        <div key={c.courseID}>
+                            <Link to ={`/Program/${props.id}/${c.courseID}`} state={{courseCode: c.courseCode, courseDescription: c.description}}>
                                 <li> { c.courseCode } </li>
                             </Link>
                         </div> 

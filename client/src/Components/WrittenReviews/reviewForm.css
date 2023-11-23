@@ -1,8 +1,9 @@
 .form {
-    width: 500px; /* Adjust the width as needed */
+    max-width: 600px !important; /* Adjust the width as needed */
     margin: auto; /* Center the form */
     margin-top:10%;
-  }
+    background-color: white;
+}
   
   .form input, .form textarea {
     display: block;
@@ -19,15 +20,7 @@
   .class__title{
     text-align: center;
     padding:2%;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     color:white;
     background-color: #912338;
-  }
-
-  .form__card{
-    text-align:center;
-    width:38%;
-    padding:1%;
-    background-color: white;
-    margin:auto;
   }

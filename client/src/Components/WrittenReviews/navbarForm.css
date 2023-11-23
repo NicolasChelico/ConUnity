@@ -1,33 +1,49 @@
 .form {
-    width: 500px; /* Adjust the width as needed */
-    margin: auto; /* Center the form */
-    margin-top:10%;
-  }
-  
-  .form input, .form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px; /* Adjust the margin as needed for spacing between inputs */
-  }
-  
-  .submit__button{
-    background-color: black;
-    width:100%;
-    color: white;
-  }
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  .class__title{
-    text-align: center;
-    padding:2%;
-    margin-bottom: 2%;
-    color:white;
-    background-color: #912338;
-  }
+h1 {
+  text-align: center;
+  color: #333;
+}
 
-  .form__card{
-    text-align:center;
-    width:38%;
-    padding:1%;
-    background-color: white;
-    margin:auto;
-  }
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  resize: none;
+}
+
+textarea[type="text"] {
+  resize: none;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+/* Add the following styles for the rating__row */
+
+
+/* Add the following styles for the button */
+

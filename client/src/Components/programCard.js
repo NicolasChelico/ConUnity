@@ -7,8 +7,8 @@ import './programCard.css'
 
 const ProgramCard = props => {
     const style={
-        width:'18rem',
-        height:'14rem'
+        width:'15rem',
+        height:'12rem'
         // backgroundImage: "url('https://unsplash.com/photos/blue-and-silver-industrial-machine-nyAzMQ6Ejgs')"
     }
 
@@ -17,7 +17,7 @@ const ProgramCard = props => {
     <>
         <Card style={ style } className="class__card">
             <Card.Body >
-                <Card.Title style={{fontSize:'35px'}}>{props.programName}</Card.Title> 
+                <Card.Title style={{fontSize:'25px'}}>{props.programName}</Card.Title> 
                 <Link to ={`/Program/${props.programID}`} state={{programName: props.programName}}><Button variant="primary">View Courses</Button></Link>
             </Card.Body>
         </Card>

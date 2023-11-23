@@ -6,8 +6,6 @@ import Navbar from "./Navbar";
 import SideDrawer from "../sideDrawer";
 import NavOption from "./navOption";
 import MainHeader from "./MainHeader";
-
-
 import { FaHome } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -16,17 +14,18 @@ import { FaAngleDown } from "react-icons/fa6";
 
 const MainNavigation = (props) => {
 
-    
+    const windowLocation = window.location.pathname;
+
+    console.log(windowLocation)
     const [isDrawerOpen , setDrawerOpen] = useState(false);
     const [programs, setPrograms] = useState([])
     const [programsShowing, setProgramsShowing] = useState(false)
-
+    
     useEffect(() => {
         const fetchPrograms = async () =>{
             try{
                 const res = await axios.get("http://localhost:8801/Main")
-                setPrograms(res.data)
-                
+                setPrograms(res.data)          
             }catch(err){
                 console.log(err)
             }
@@ -41,6 +40,7 @@ const MainNavigation = (props) => {
     const openDrawer = () => {
         setDrawerOpen(true)
     }
+
     return (
         <>
         <MainHeader>
@@ -54,13 +54,12 @@ const MainNavigation = (props) => {
                             <MdOutlineRateReview />
                     </NavOption>
                     <div>
-                    <NavOption trajectory={'/#program-holder'} action={"View Programs"} onClick={() => setProgramsShowing(!programsShowing)}>
+                    <NavOption action={"View Programs"} onClick={() => setProgramsShowing(!programsShowing)}>
                         {!programsShowing ? (<FaAngleDown />) : (<FaAngleUp />)}
                     </NavOption>
                     
-                    { programsShowing && (programs.map(p=> {return(
-                   
-                            <Link to ={`/Program/${p.programID}`} onClick={closeDrawer} state={{programName: p.programName}}>
+                    { programsShowing && (programs?.map(p=> {return(
+                            <Link to ={`/Program/${p.programID}`} onClick={closeDrawer} state={{programName: p.programName}} program={p.programName}>
                                 <li className="program__list">{p.programName}</li>
                             </Link>
                     )}))}

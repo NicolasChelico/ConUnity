@@ -20,10 +20,10 @@ const CourseReview = (props) => {
     }]
 
     const location = useLocation()
-    const { courseCode } = location.state
+   
+    const { courseCode , courseDescription} = location.state
+ 
 
-    console.log(courseCode)
-    
     useEffect(() => {
         const fetchReviews = async () =>{
             try{
@@ -36,8 +36,7 @@ const CourseReview = (props) => {
         fetchReviews();
     },[courseID])
 
-
-
+ 
     return(
         <div className="row top__section" >
             <div className="courses__hero">
@@ -47,9 +46,10 @@ const CourseReview = (props) => {
         <div className="row justify-content-center">
         <div className="col-lg-10 justify-content-center dashboard__section">
             <ReviewCard 
-                courseID= {courseID}
+                courseID= {courseID.split(" ").join("")}
                 courseCode={courseCode}
                 totalReviews={review.length}
+                courseDescription={courseDescription}
             />
         </div>
         <div className="col-lg-8">
@@ -66,11 +66,11 @@ const CourseReview = (props) => {
                        return( 
                         <div key={id}>
                             <UserReview  
-                            date={rev.date.slice(0,9)} 
-                            UserReview={rev.review}
-                            examRating={rev.examRating}
-                            assRating={rev.assRating}
-                            courseRating={rev.contentRating}     
+                                date={rev.date.slice(0,9)} 
+                                UserReview={rev.review}
+                                examRating={rev.examRating}
+                                assRating={rev.assRating}
+                                courseRating={rev.contentRating}     
                             />
                         </div>
                        );
