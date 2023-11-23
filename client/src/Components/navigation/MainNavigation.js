@@ -10,8 +10,9 @@ import MainHeader from "./MainHeader";
 
 import { FaHome } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { FaAngleUp } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6";
 
 const MainNavigation = (props) => {
 
@@ -40,9 +41,7 @@ const MainNavigation = (props) => {
     const openDrawer = () => {
         setDrawerOpen(true)
     }
-
     return (
-    
         <>
         <MainHeader>
             <Navbar onClick = {openDrawer} />
@@ -51,12 +50,12 @@ const MainNavigation = (props) => {
                     <NavOption trajectory={'/'} action={"Home"} onClick={closeDrawer}>
                             <FaHome />
                     </NavOption>
-                    <NavOption trajectory={'/'} action={"Write Review"} onClick={closeDrawer}>
+                    <NavOption trajectory={'/ReviewCourse'} action={"Write Review"} onClick={closeDrawer} programList={programs}>
                             <MdOutlineRateReview />
                     </NavOption>
                     <div>
-                    <NavOption trajectory={'/'} action={"View Programs"} onClick={closeDrawer}>
-                        <RiArrowDropDownLine onClick={() => setProgramsShowing(!programsShowing)} size={30}/>
+                    <NavOption trajectory={'/#program-holder'} action={"View Programs"} onClick={() => setProgramsShowing(!programsShowing)}>
+                        {!programsShowing ? (<FaAngleDown />) : (<FaAngleUp />)}
                     </NavOption>
                     
                     { programsShowing && (programs.map(p=> {return(
@@ -66,8 +65,9 @@ const MainNavigation = (props) => {
                             </Link>
                     )}))}
                     </div>
-
+                    <hr></hr>
                     <div className="row">
+                       
                     <div className="col-lg-6">
                           login
                     </div>

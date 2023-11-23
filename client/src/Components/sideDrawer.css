@@ -39,3 +39,9 @@
     background-color: black;
     color:white;
 }
+
+.side__drawer hr{
+    width:90% !important;
+    margin:10% 0;
+
+}

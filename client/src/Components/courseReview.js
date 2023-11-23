@@ -5,7 +5,7 @@ import axios from "axios";
 import './courseReview.css'
 import ReviewCard from "./dashboard/reviewCard";
 
-import UserReview from "./reviews/userReview";
+import UserReview from "./readingReviews/userReview";
 
 const CourseReview = (props) => {
     const {courseID, id}  = useParams()

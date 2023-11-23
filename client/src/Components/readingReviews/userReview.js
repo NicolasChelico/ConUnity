@@ -8,7 +8,7 @@ const UserReview = props =>{
     return(
         <div className="col-lg-12 user__card">
             <div className="container">
-            <h1>ervetg</h1>
+            <h1>Review</h1>
             <div className="grading__div">
                 <span className="grading__score">
                     <p>Exam Rating: {props.examRating}/5</p>

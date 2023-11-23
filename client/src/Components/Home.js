@@ -7,7 +7,7 @@ import Search from "./search";
 import ProgramCard from "./programCard";
 import { Link } from 'react-router-dom';
 import SpecificProgram from './specificProgram'
-import UserReview from './reviews/userReview';
+import UserReview from './readingReviews/userReview';
 
 const Home = () => {
     const [isDrawerOpen , setDrawerOpen] = useState(false);
@@ -41,7 +41,7 @@ const Home = () => {
                     <Search/>
             </div>
             <div className = "container main__area"> 
-                <div className="row justify-content-center program__holder">
+                <div className="row justify-content-center program__holder " id="program-holder">
                     <h1>Programs</h1>
                     {
                         programs.map((p) => {

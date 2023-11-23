@@ -36,6 +36,15 @@ app.get("/Main", (req,res) => {
     })
 })
 
+app.get("/ReviewCourse", (req,res) => {
+    const q = "SELECT c.courseID, c.courseName, c.courseCode, m.programID FROM Course c JOIN MadeUp m ON m.courseID = c.courseID;";
+    db.query(q, (err,data) => {
+        if(err) return (res.json(err))
+        return res.json(data);
+    })
+})
+
+
 // gets the courses according to each program
 app.get("/Program/:id" , (req,res) => {
     const pID = req.params.id;

@@ -6,10 +6,10 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavOption = (props) => {
 
-
+console.log("im getting the programs " , props.programList)
     return(
         <div>
-            <NavLink to={props.trajectory}>
+            <NavLink to={props.trajectory} state = {{programList: props.programList}}>
                 <li onClick={props.onClick}>      
                     <span className="nav__icon"> {props.children} {props.action} </span>
                 </li>
