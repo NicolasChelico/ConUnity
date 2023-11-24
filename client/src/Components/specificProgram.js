@@ -8,13 +8,26 @@ import ProgramList from "./program-list/programList";
 const SpecificProgram = (props) => {
 
     const [classList, setClassList] = useState([])
-   
+    const [pName, setName] = useState("")
     const location = useLocation()
     
     const { programName } = location.state
    const p = props.program;
    console.log(p)
     const {id} = useParams();
+
+    useEffect(() => {
+        const fetchProgram = async () =>{
+            try{
+                const res = await axios.get(`http://localhost:8801/Main/${id}`)
+                setName(res.data) 
+            }catch(err){
+                console.log(err)
+            }
+        }
+        fetchProgram();
+    }
+    , [])
 
     useEffect(() => {
         const fetchClasses = async () =>{
@@ -29,6 +42,7 @@ const SpecificProgram = (props) => {
     }
     , [id])
     
+    console.log(pName)
 
     const twoHundred = classList.filter((o) => {
         return o.courseCode.charAt(5) === '2';
@@ -40,12 +54,11 @@ const SpecificProgram = (props) => {
         return o.courseCode.charAt(5) === '4'
     })
 
-    console.log(twoHundred)
-
+    
     return(
         <div className="container">
             <div style={{margin:'100px 0'}}>
-            <h1> {programName} </h1>
+            <h1> {pName} </h1>
             </div>
         <div className="row">
                 <ProgramList course={twoHundred} title="Two Hundreds" id = {id}/>

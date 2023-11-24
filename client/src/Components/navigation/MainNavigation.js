@@ -24,7 +24,7 @@ const MainNavigation = (props) => {
     useEffect(() => {
         const fetchPrograms = async () =>{
             try{
-                const res = await axios.get("http://localhost:8801/Main")
+                const res = await axios.get("http://localhost:8801/Home")
                 setPrograms(res.data)          
             }catch(err){
                 console.log(err)

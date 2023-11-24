@@ -27,12 +27,15 @@ app.get("/Home", (req,res) => {
     })
 })
 
-// reads all programs for the navbar and cards
-app.get("/Main", (req,res) => {
-    const q = "SELECT * FROM Program"
+// reads all programs for to have the specific program for naming
+app.get("/Main/:id", (req,res) => {
+    const pID = req.params.id;
+    const q = "SELECT p.programName FROM Program p WHERE p.programID = "+pID;
     db.query(q, (err, data) => {
         if(err) return res.json(err)
-        return res.json(data)
+
+        const programName = data[0] ? data[0].programName : null;
+        return res.json(programName)
     })
 })
 
@@ -54,6 +57,8 @@ app.get("/Program/:id" , (req,res) => {
         return (res.json(data));
     })
 })
+
+
 
 // Gets the reviews for each classes
 app.get("/Program/:id/:courseID" , (req, res) => {
