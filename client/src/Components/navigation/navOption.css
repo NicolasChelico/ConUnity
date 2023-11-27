@@ -1,4 +1,9 @@
 .nav__icon{
     text-decoration: none;
     font-size: larger;
+    font-size:24px;
+}
+
+.navlink__option{
+    margin-top: 5%;
 }

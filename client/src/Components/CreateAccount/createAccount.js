@@ -25,10 +25,11 @@ export const CreateAccount = () => {
         e.preventDefault()
         if(newUser.password !== newUser.confirm){
             alert('Wrong information provided.')
-            console.log(newUser)
+            
             setError(true)
         }
         else{
+            console.log(newUser)
             alert("Account successfully created !")
             navigate("/",{state: "Hwllo"})
 

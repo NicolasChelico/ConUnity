@@ -50,9 +50,6 @@ const MainNavigation = (props) => {
                     <NavOption trajectory={'/'} action={"Home"} onClick={closeDrawer}>
                             <FaHome />
                     </NavOption>
-                    <NavOption trajectory={'/ReviewCourse'} action={"Write Review"} onClick={closeDrawer} programList={programs}>
-                            <MdOutlineRateReview />
-                    </NavOption>
                     <div>
                     <NavOption action={"View Programs"} onClick={() => setProgramsShowing(!programsShowing)}>
                         {!programsShowing ? (<FaAngleDown />) : (<FaAngleUp />)}
@@ -65,13 +62,13 @@ const MainNavigation = (props) => {
                     )}))}
                     </div>
                     <hr></hr>
-                    <div className="row">
+                    <div className="row login__signup">
                        
                     <div className="col-lg-6">
-                          login
+                    <p><Link to="/Login">Login</Link></p>
                     </div>
                     <div className="col-lg-6">
-                        sign up
+                        <p><Link to="/CreateAccount">Sign up</Link></p>
                     </div>
                     </div>
                     
