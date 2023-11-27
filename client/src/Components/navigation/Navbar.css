@@ -10,3 +10,16 @@
     position: absolute;
     left: 2rem;
 }
+
+.nav__links{
+    text-align: right;
+    margin-top: 15px;
+}
+.nav__links li{
+    font-family: 'Raleway';
+    font-weight: bold;
+    display: inline;
+    color:white;
+    margin: 4%;
+
+}

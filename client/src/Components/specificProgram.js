@@ -11,7 +11,7 @@ const SpecificProgram = (props) => {
     const [pName, setName] = useState("")
     const location = useLocation()
     
-    const { programName } = location.state
+    // const { programName } = location.state
    const p = props.program;
    console.log(p)
     const {id} = useParams();

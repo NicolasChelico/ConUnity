@@ -11,6 +11,7 @@ const CourseReview = (props) => {
     const {courseID, id}  = useParams()
     const [review, setReviews] = useState([])
     const [loggedIn, setLoggedIn] = useState(false);
+    
 
    
     const users = [{
@@ -33,10 +34,9 @@ const CourseReview = (props) => {
                 console.log(err)
             }
         }
-        fetchReviews();
+        fetchReviews();      
     },[courseID])
 
- 
     return(
         <div className="row top__section" >
             <div className="courses__hero">

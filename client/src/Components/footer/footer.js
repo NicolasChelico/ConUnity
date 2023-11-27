@@ -1,10 +1,13 @@
 import React from "react";
+import {  } from "react-router-dom";
 
 import './footer.css';
 
 
 export const Footer = () => {
 
+   const location = window.location.href;
+   console.log("Current location: " , location)
     return (
         <div className="row main__footer">
             <div className="col-lg-6">

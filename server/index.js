@@ -27,6 +27,18 @@ app.get("/Home", (req,res) => {
     })
 })
 
+app.get("/CourseInfo/:courseID", (req,res) => {
+    const cID = req.params.courseID;
+    const q = "SELECT c.courseName, c.courseCode, c.description FROM Course c WHERE c.courseID = "+cID
+    db.query(q, (err, data) => {
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+// 
+
+
+
 // reads all programs for to have the specific program for naming
 app.get("/Main/:id", (req,res) => {
     const pID = req.params.id;

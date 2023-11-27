@@ -1,13 +1,29 @@
-import React from "react";
-import {  Link, useLocation } from "react-router-dom";
+import {React , useState, useEffect} from "react";
+import {  Link, useLocation, useParams } from "react-router-dom";
 import './reviewCard.css';
 import ScoringSection from "./scoringSection";
-
+import axios from "axios";
 
 const ReviewCard = props => {
 
+    const [courseInfo, setCourseInfo] = useState([])
 
-    console.log("i have the course code " , props.courseCode)
+    const {courseID} = useParams();
+    useEffect(() => {
+        const fetchCourseInfo = async () => {
+            try{
+                const res = await axios.get(`http://localhost:8801/CourseInfo/${courseID}`)
+                setCourseInfo(res.data)
+            }catch(err){
+                console.error(err)
+            }
+        }
+        fetchCourseInfo();
+    },[courseID])
+ 
+   
+
+
     return (
         <div className="row dashboard__main">    
             <div className="col-lg-6"> 

@@ -1,21 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@700&display=swap');
+
+
+
+body{
+    background-color:#f2f2f2;
+
+}
+
+
 .class__card{
-    padding: 2% 0 ;
+    padding:  10px ;
     border: 1px solid #eee;
     transition-duration: 300ms;
     margin: 1.5% ;
     text-align: center;
-    /* background-color: #912338; */
-    background-color: #eeee;
-    color:  #912338;
+    
+    font-weight: bold;
+    color:  black;
     box-shadow: 0 5px 5px 5px rgba(0,0,0,0.3);
 }
 
 .class__card button{
-    background-color: #eee;
+    font-family: 'Montserrat';
+    font-weight:bold;
+    background-color: #912338;
     text-decoration: none;
-    border-color: black;
-    color:black;
+    border-color: #912338;
+    color:white;
     margin-top:10%;
+    padding: 12px 32px !important;
+  
 }
 .class__card:hover{
     transform: scale(1.1);
@@ -27,4 +41,15 @@
     border-color: black;
 }
 
+
+.card__title{
+
+color: #000;
+text-align: center;
+font-family: "Raleway" !important;
+font-size: 28px !important;
+font-weight: 500px !important;
+line-height: normal;
+text-transform: uppercase;
+}
 

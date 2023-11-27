@@ -9,12 +9,13 @@ const NavbarForm = props =>{
     const date = new Date();
     const reviewDate = date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate();
 
+    const [programList, setProgramList] = useState([]);
     const [courses, setCourses] = useState([])
     const [optionCourses, setOptionCourses] = useState([])
     const [event, setEvent] = useState()
     const [selectCourse, setSelectCourse] = useState("");
     const location = useLocation()
-    const { programList } = location.state;
+    // const { programList } = location.state;
    
     const [review, setReview] = useState({
         review: '',
@@ -40,7 +41,18 @@ const NavbarForm = props =>{
         fetchCourses()
     },[])
     
-
+    useEffect(() => {
+        const fetchPrograms = async () =>{
+            try{
+                const res = await axios.get("http://localhost:8801/Home")
+                setProgramList(res.data)          
+            }catch(err){
+                console.log(err)
+            }
+        }
+        fetchPrograms();
+    }
+    , [])
 
 
     const onProgramChangeHandler = e => {     

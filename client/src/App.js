@@ -8,6 +8,7 @@ import CourseReview from './Components/courseReview.js';
 import MainNavigation from './Components/navigation/MainNavigation.js';
 import ReviewPage from './Components/WrittenReviews/reviewPage.js';
 import NavbarForm from './Components/WrittenReviews/navbarForm.js';
+import LoginPage from './Components/Login/loginPage.js';
 
 const App = () => {
   const [programs, setPrograms] = useState([])
@@ -24,10 +25,11 @@ const App = () => {
                 <Route path="/Program/:id/:courseID" element={<CourseReview />}/>
                 <Route path="/Review/:courseCode/:courseID" element={<ReviewPage />}/>
                 <Route path="/ReviewCourse" element={<NavbarForm />}/>
+                <Route path="/Login" element={<LoginPage />}/>
             </Routes> 
           </MainNavigation>
         </BrowserRouter>
-        <Footer/>
+        {/* <Footer/> */}
         
      
     </>

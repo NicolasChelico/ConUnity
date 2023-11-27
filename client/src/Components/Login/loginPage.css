@@ -1,0 +1,74 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&display=swap');
+
+.login__body{
+    background: #912338;
+    height:825px;
+}
+.login__row{
+   padding-top:10% !important;
+}
+.login__img{
+    height: 565px;
+    background-image: url('https://www.concordia.ca/cunews/main/stories/2021/11/23/concordia-honours-13-faculty-for-their-outstanding-career-achievements-academic-leadership-and-excellence-in-teaching/_jcr_content/parsys/image.img.jpg/1637704320672.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 0.667px solid #7E7E7E;
+}   
+
+.login__section{
+    border-radius: 10px;
+    border: 0.667px solid #7E7E7E;
+    background: #FFF;
+    margin-left:-1%;
+    text-align: center;
+}
+
+.login__section h2{
+    font-size:24px;
+    text-transform: uppercase;
+    line-height:normal;
+    margin-top: 45px;
+    padding:10px;
+    text-align: center;
+    background-color: #912338;
+    color:#fff;
+    font-family: 'Lato'
+}
+
+.info__login{
+    color:black;
+    font-family: 'Montserrat';
+    margin-left:10%;
+    text-align:center;
+}
+
+.login__button{
+    color: white!important;
+    background-color: black;
+    font-family: 'Montserrat';
+  
+}
+.login__button:hover{
+    color: white!important;
+    background-color: black;
+    font-family: 'Montserrat';
+  
+}
+
+.info__login label{
+    text-align:start;
+    color: #52525C;
+}
+
+.info__login h5{
+    font-size:24px;
+    text-align:center;
+    margin-top:15%;
+}
+
+.forgot__password{
+    margin-top:50px;
+}

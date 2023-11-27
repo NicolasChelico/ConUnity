@@ -19,13 +19,14 @@ const Navbar = (props) => {
             // <nav className="row nav__main">
             <>
                 <div className="col-lg-4 open__drawer__button">
-                    <button  className="btn open__drawer" onClick={props.onClick}><SlMenu size={35} color={"white"}/></button>
+                    <button  className="btn open__drawer" onClick={props.onClick}><SlMenu size={32} color={"white"}/></button>
                 </div>
-                <div className="col-lg-4">
-                    <Link to="/"><img src ="" alt="logo"/></Link>                        
-                </div>
-                <div className="col-lg-4">
-                    <FaCircleUser size = {35}/>
+                <div className="col-lg-8">
+                    <ul className="nav__links">
+                        <Link to="/"><li>HOME</li></Link>                
+                        <Link to="/ReviewCourse"><li> REVIEW</li></Link> 
+                        <Link to="/Login"><li>LOGIN</li></Link>
+                    </ul>
                 </div>
                 </>
             // </nav>
