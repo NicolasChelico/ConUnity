@@ -9,6 +9,7 @@ import MainNavigation from './Components/navigation/MainNavigation.js';
 import ReviewPage from './Components/WrittenReviews/reviewPage.js';
 import NavbarForm from './Components/WrittenReviews/navbarForm.js';
 import LoginPage from './Components/Login/loginPage.js';
+import { CreateAccount } from './Components/CreateAccount/createAccount.js';
 
 const App = () => {
   const [programs, setPrograms] = useState([])
@@ -26,6 +27,7 @@ const App = () => {
                 <Route path="/Review/:courseCode/:courseID" element={<ReviewPage />}/>
                 <Route path="/ReviewCourse" element={<NavbarForm />}/>
                 <Route path="/Login" element={<LoginPage />}/>
+                <Route path="/CreateAccount" element={<CreateAccount />}/>
             </Routes> 
           </MainNavigation>
         </BrowserRouter>

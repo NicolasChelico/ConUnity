@@ -1,24 +1,22 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&display=swap');
-
-.login__body{
+.account__body{
     background: #912338;
     height:825px;
 }
-.login__row{
-   padding-top:10% !important;
-}
-.login__img{
+.account__row{
+    padding-top:10% !important;
+ }
+.account__img{
     height: 600px;
-    background-image: url('https://www.concordia.ca/cunews/main/stories/2021/11/23/concordia-honours-13-faculty-for-their-outstanding-career-achievements-academic-leadership-and-excellence-in-teaching/_jcr_content/parsys/image.img.jpg/1637704320672.jpg');
+    background-image: url('https://www.concordia.ca/content/concordia/en/maps/buildings/ev/_jcr_content/content-main/image_1438381128.img.jpg/1668709060941.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     border: 0.667px solid #7E7E7E;
-}   
+}
 
-.login__section{
+.account__section{
     border-radius: 10px;
     border: 0.667px solid #7E7E7E;
     background: #FFF;
@@ -26,7 +24,7 @@
     text-align: center;
 }
 
-.login__section h2{
+.account__section h2{
     font-size:24px;
     text-transform: uppercase;
     line-height:normal;
@@ -38,32 +36,33 @@
     font-family: 'Lato'
 }
 
-.info__login{
+.account__login{
     color:black;
     font-family: 'Montserrat';
     margin-left:10%;
     text-align:center;
 }
 
-.login__button{
+.account__button{
+    margin-top:5% ;
     color: white!important;
     background-color: black;
     font-family: 'Montserrat';
   
 }
-.login__button:hover{
+.account__button:hover{
     color: white!important;
     background-color: black;
     font-family: 'Montserrat';
   
 }
 
-.info__login label{
+.account__login label{
     text-align:start;
     color: #52525C;
 }
 
-.info__login h5{
+.account__login h5{
     font-size:24px;
     text-align:center;
     margin-top:15%;
@@ -71,14 +70,4 @@
 
 .forgot__password{
     margin-top:50px;
-}
-
-.create__account{
-    text-align:end;
-    margin-bottom:10%;
-}
-
-.create__account a{
-    text-decoration: underline;
-    font-size:14px;
 }

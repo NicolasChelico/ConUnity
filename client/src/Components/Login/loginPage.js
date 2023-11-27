@@ -1,5 +1,5 @@
 import {React , useState} from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './loginPage.css'
 
 
@@ -29,18 +29,13 @@ const LoginPage = () => {
                 setProperLogin(false);
             }
             else{navigate("/ReviewCourse")};
-
-              
-            
-
      }
 
 
     return(
        <div className="login__body">
         <div className="row justify-content-center login__row">
-            <div className="col-lg-6 login__img">
-            </div>
+            <div className="col-lg-6 login__img"></div>
             <div className="col-lg-4 login__section">
                 <div className="col-lg-12"><h2>WELCOME BACK!</h2></div>
                 <div className="col-lg-10 info__login ">
@@ -50,6 +45,7 @@ const LoginPage = () => {
                     <input type="text" onChange={handleChange} name="email"/>
                     <label>Password</label>
                     <input type="password" onChange={handleChange} name="password"/>
+                    <div className="create__account"><Link to="/">Create account</Link></div>
                     {!properLogin && (
                         <p style={{color:'red'}}>Wrong credentials.</p>
                     )}
