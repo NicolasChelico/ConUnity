@@ -1,5 +1,5 @@
 import {React, useEffect, useState} from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 import axios from "axios";
 import './navbarForm.css'
 import { FiSend } from "react-icons/fi";
@@ -15,7 +15,7 @@ const NavbarForm = props =>{
     const [event, setEvent] = useState()
     const [selectCourse, setSelectCourse] = useState("");
     const location = useLocation()
-    // const { programList } = location.state;
+    const navigate = useNavigate();
    
     const [review, setReview] = useState({
         review: '',
@@ -63,7 +63,7 @@ const NavbarForm = props =>{
     
     const onCourseSelection = e =>{
         setSelectCourse(e.target.value);
-        setReview(prev => ({ ...prev, courseID: e.target.value }));
+        setReview(prev => ({ ...prev, courseID: parseInt(e.target.value) }));
     }
     
     const handleChange = (e) =>{
@@ -71,7 +71,21 @@ const NavbarForm = props =>{
     
      }
      useEffect(() => {console.log(review)},[event,optionCourses,selectCourse, review])
-    
+
+     const handleClick = async e => {
+        e.preventDefault()
+        if(review.review === ""){return alert("Please fill out a Review")}
+        try{
+            await axios.post("http://localhost:8801/Review/:courseCode/:courseID", review)
+            alert("Review was successfully registered!")
+            navigate("/")
+
+        }catch(err){
+            console.error(err)
+        }
+     }
+
+
     return(
     <div className="form">
         <h1> Review a Class!</h1>
@@ -112,7 +126,7 @@ const NavbarForm = props =>{
             <label>Review:</label>
             <textarea type="text"  col={5} rows={8} placeholder="Review..." onChange={handleChange} name="review"/>
         </div>
-        <button className="btn btn-lg submit__button">Submit Review <FiSend /></button>
+        <button className="btn btn-lg submit__button" onClick={handleClick}>Submit Review <FiSend /></button>
     </div>
     );
 }

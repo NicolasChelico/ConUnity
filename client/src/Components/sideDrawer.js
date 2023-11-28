@@ -17,7 +17,7 @@ const SideDrawer = (props) => {
                 <div className ="close__button__drawer">
                     <h5>CONUNITY</h5>
                     <div className="leave__review__button">
-                        <button><Link>Leave a Review!</Link></button>
+                        <button><Link to="/ReviewCourse">Leave a Review!</Link></button>
                     </div>
                 </div>
                
