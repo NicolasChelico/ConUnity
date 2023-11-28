@@ -87,46 +87,52 @@ const NavbarForm = props =>{
 
 
     return(
-    <div className="form">
-        <h1> Review a Class!</h1>
-        <hr></hr>
-      
-            <label> Choose a Program: </label>
-            <select onChange = {onProgramChangeHandler}>
-                <option> Choose Program</option>
-                {programList?.map((p) => {
-                    return(<option name="courseID" key={p.programID} value={p.programID}> {p.programName}</option>)
-                })}
-            </select>
+        <div className="form__hero">
+            <div className="form">
+                <div className="review__title">
+                <h1> Review a Course!</h1>
+                </div>
+                <div className="row">
+                    <div className="col-lg-6">
+                    <label> Choose a Program: </label>
+                    <select onChange = {onProgramChangeHandler}>
+                        <option> Choose Program</option>
+                        {programList?.map((p) => {
+                            return(<option name="courseID" key={p.programID} value={p.programID}> {p.programName}</option>)
+                        })}
+                    </select>
+                    </div>
 
-        <div>
-        <label>Choose Course:</label>
-        <select onChange={(onCourseSelection)}>
-            <option value="none"> choose course..</option>
-            {optionCourses.length === 0 ? (<option value="none">No Courses...</option>)
-                :(optionCourses.map(c => {
-                    return (<option key={c.courseID} value={c.courseID} name="courseID">{c.courseCode}</option>)
-                }))   
-        }
-        </select>
-        </div>
-        <div className="rating__row">
-            <label> Exam Rating (Score 0-5): </label>
-            <input type="number" min={0} max={5} placeholder="Exam Rating /5" onChange={handleChange} name="examRating"/>
-        </div>
-        <div>
-            <label>Assignment Rating (Score 0-5) </label>
-            <input type="number" min={0} max={5} placeholder="Assignment Rating /5" onChange={handleChange} name="assRating"/>
-        </div>
-        <div>
-            <label>Overall Rating (Score 0-5)</label>
-            <input type="number" min={0} max={5} placeholder="Overall Rating /5" onChange={handleChange} name="contentRating"/>
-        </div>
-        <div>
-            <label>Review:</label>
-            <textarea type="text"  col={5} rows={8} placeholder="Review..." onChange={handleChange} name="review"/>
-        </div>
-        <button className="btn btn-lg submit__button" onClick={handleClick}>Submit Review <FiSend /></button>
+                <div className="col-lg-6">
+                    <label>Choose Course:</label>
+                    <select onChange={(onCourseSelection)}>
+                        <option value="none"> Eg. COMP248</option>
+                        {optionCourses.length === 0 ? (<option value="none">No Courses...</option>)
+                            :(optionCourses.map(c => {
+                                return (<option key={c.courseID} value={c.courseID} name="courseID">{c.courseCode}</option>)
+                            }))   
+                    }
+                    </select>
+                </div>
+                </div>
+                <div className="rating__row">
+                    <label> Exam Rating (Score 0-5): </label>
+                    <input type="number" min={0} max={5} placeholder="Exam Rating /5" onChange={handleChange} name="examRating"/>
+                </div>
+                <div>
+                    <label>Assignment Rating (Score 0-5) </label>
+                    <input type="number" min={0} max={5} placeholder="Assignment Rating /5" onChange={handleChange} name="assRating"/>
+                </div>
+                <div>
+                    <label>Overall Rating (Score 0-5)</label>
+                    <input type="number" min={0} max={5} placeholder="Overall Rating /5" onChange={handleChange} name="contentRating"/>
+                </div>
+                <div>
+                    <label>Review:</label>
+                    <textarea type="text"  col={5} rows={7} placeholder="Review..." onChange={handleChange} name="review"/>
+                </div>
+                <button className="btn btn-lg submit__button" onClick={handleClick}>Submit Review <FiSend /></button>
+            </div>
     </div>
     );
 }

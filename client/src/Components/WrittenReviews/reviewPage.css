@@ -1,9 +1,9 @@
 .review__page{
-    width: 100%;
     height: 1000px;
-    background-image: url('https://www.concordia.ca/content/concordia/en/maps/buildings/mb/_jcr_content/content-main/image.img.jpg/1668707772058.jpg');
+    background-image: url('https://www.kpmb.com/wp-content/uploads/2016/05/0004_N76_300dpi-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top:8%;
+    border-radius: 10px;
+    border: 0.667px solid #7E7E7E;
 }

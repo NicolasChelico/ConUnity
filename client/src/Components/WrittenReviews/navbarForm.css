@@ -1,3 +1,17 @@
+
+.form__hero{
+    height: 1000px;
+    background-image: url('https://www.kpmb.com/wp-content/uploads/2016/05/0004_N76_300dpi-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 0.667px solid #7E7E7E;
+}
+
+
+
+
 .form {
   max-width: 400px;
   margin: 10% auto;
@@ -7,6 +21,14 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.form label{
+  font-size:14px;
+  font-family: 'Montserrat';
+  
+}
+.form option{
+  color: #52525C;
+}
 h1 {
   text-align: center;
   color: #333;
@@ -42,6 +64,16 @@ hr {
   border-top: 1px solid #ccc;
 }
 
+.review__title{
+  
+  background-color: #912338;
+}
+
+.review__title h1{
+  margin-bottom: 5%;
+  font-family:'Lato';
+  color:white;
+}
 /* Add the following styles for the rating__row */
 
 

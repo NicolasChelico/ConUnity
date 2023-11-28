@@ -45,7 +45,7 @@ const LoginPage = () => {
                     <input type="text" onChange={handleChange} name="email"/>
                     <label>Password</label>
                     <input type="password" onChange={handleChange} name="password"/>
-                    <div className="create__account"><Link to="/">Create account</Link></div>
+                    <div className="create__account"><Link to="/CreateAccount">Create account</Link></div>
                     {!properLogin && (
                         <p style={{color:'red'}}>Wrong credentials.</p>
                     )}
