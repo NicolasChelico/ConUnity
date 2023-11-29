@@ -4,17 +4,44 @@ a{
 }
 
 .list__holder{
-   background-color: #eee;
+    display:flex;
+    flex-direction: column;
+    gap:21.33;
+    align-items: center;
+    width: 400px;
+    background-color: #fff;
     color:black;
     text-decoration: none;
     padding:50px ;
+    height: fit-content;
+    min-height:200px;
+    
 }
 
 .list__holder  li {
+    font-family: 'Montserrat';
+    font-weight:500;
+    font-size:20px;
+    list-style: none;
     text-decoration: none;
     transition-duration: 300ms;
+    text-align: center;
+    
+}
+
+.list__holder ul{
+    padding-left:0 !important;
 }
 
 .list__holder li:hover{
     transform: scale(1.05);
+}
+
+.list__holder h2{
+    font-family:'Raleway';
+    font-weight:700;
+    color:#912338;
+    line-height: normal;
+    text-align: center;
+   
 }

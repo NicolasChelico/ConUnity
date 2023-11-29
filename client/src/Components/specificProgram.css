@@ -1,0 +1,29 @@
+.program__holder__name{
+    margin-top:50px;
+}
+
+.program__holder__name h1{
+    font-family:'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom:5%;
+}
+
+.program__card__holder{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex: 1 0 0;
+    align-self: stretch;
+    justify-content: space-evenly;
+    margin-bottom: 12%;
+}
+
+.information__holder{
+    align-items:start;
+    display:flex;
+    flex: 1 0 0;
+    gap:22px;
+    flex-direction:row;
+}

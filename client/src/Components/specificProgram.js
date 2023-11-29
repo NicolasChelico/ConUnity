@@ -56,15 +56,22 @@ const SpecificProgram = (props) => {
 
     
     return(
-        <div className="container">
-            <div style={{margin:'100px 0'}}>
-            <h1> {pName} </h1>
+        <div>
+            <div className="background__hero">
+                    <div className='row mission__statement'>
+                        <h1>Mission Statement</h1>
+                    </div>
             </div>
-        <div className="row">
-                <ProgramList course={twoHundred} title="Two Hundreds" id = {id}/>
-                <ProgramList course={threeHundred} title="Three Hundreds" id = {id}/>
-                <ProgramList course={fourHundred} title="Four Hundreds" id = {id}/> 
-        </div>    
+            <div className="program__holder__name">
+                    <h1> {pName} </h1>
+                </div>
+            <div className="information__holder">
+                <div className="program__card__holder">               
+                        <ProgramList course={twoHundred} title="200" id = {id} />
+                        <ProgramList course={threeHundred} title="300" id = {id}/>
+                        <ProgramList course={fourHundred} title="400" id = {id}/> 
+                </div>    
+            </div>
         </div>
     )
 

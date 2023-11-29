@@ -7,7 +7,7 @@ const ProgramList = props => {
     
     return(
 
-    <div className='col-lg-4 list__holder'>
+    <div className='list__holder'>
         <h2>{props.title}</h2>
         <ul>
           {
@@ -15,7 +15,7 @@ const ProgramList = props => {
                  return (  
                         <div key={c.courseID}>
                             <Link to ={`/Program/${props.id}/${c.courseID}`} state={{courseCode: c.courseCode, courseDescription: c.description}}>
-                                <li> { c.courseCode } </li>
+                                <li style={{paddingLeft:'0!important'}}> { c.courseCode } </li>
                             </Link>
                         </div> 
                 )})}

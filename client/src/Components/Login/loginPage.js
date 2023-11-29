@@ -28,7 +28,10 @@ const LoginPage = () => {
                 alert("Please enter the proper information")
                 setProperLogin(false);
             }
-            else{navigate("/ReviewCourse")};
+            
+            else{
+                
+                navigate("/ReviewCourse")};
      }
 
 

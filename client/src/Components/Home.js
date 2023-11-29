@@ -36,11 +36,7 @@ const Home = () => {
 
     return(
         <>
-            <div className="background__hero">
-                    <div className='row mission__statement'>
-                        <h1>Mission Statement</h1>
-                    </div>
-            </div>
+         
             <div className = "container main__area"> 
                 <div className="row justify-content-center program__holder " id="program-holder">
                     <h1>Programs</h1>
