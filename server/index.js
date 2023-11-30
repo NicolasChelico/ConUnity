@@ -19,6 +19,14 @@ app.get("/", (req,res) => {
     res.json("hello this is the backend")
 })
 
+app.get("/Averages/:id/:courseID" , (req,res) => {
+    const cID = req.params.courseID;
+    const q = "SELECT CEILING(AVG(examRating)) as examRating, CEILING(AVG(assRating)) as assRating, CEILING(AVG(contentRating)) as contentRating FROM Review r WHERE r.courseID = " + cID;
+    db.query(q,(err,data) => {
+        if(err) return(res.json(err))
+        return(res.json(data))
+    })
+})
 app.get("/Home", (req,res) => {
     const q = "SELECT * FROM Program"
     db.query(q, (err, data) => {
@@ -37,8 +45,6 @@ app.get("/CourseInfo/:courseID", (req,res) => {
 })
 // 
 
-
-
 // reads all programs for to have the specific program for naming
 app.get("/Main/:id", (req,res) => {
     const pID = req.params.id;
@@ -51,6 +57,7 @@ app.get("/Main/:id", (req,res) => {
     })
 })
 
+// gets each program courses
 app.get("/ReviewCourse", (req,res) => {
     const q = "SELECT c.courseID, c.courseName, c.courseCode, m.programID FROM Course c JOIN MadeUp m ON m.courseID = c.courseID;";
     db.query(q, (err,data) => {

@@ -36,7 +36,9 @@ const CourseReview = (props) => {
         }
         fetchReviews();      
     },[courseID])
-    console.log(review.length)
+    console.log(review)
+
+
     return(
         <div className="row top__section" >
             <div className="courses__hero">
