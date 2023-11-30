@@ -7,9 +7,11 @@
 }
 .login__row{
    padding-top:10% !important;
+   background: #912338;
+   padding-bottom:10%;
 }
 .login__img{
-    height: 600px;
+    height: 625px;
     background-image: url('https://www.concordia.ca/cunews/main/stories/2021/11/23/concordia-honours-13-faculty-for-their-outstanding-career-achievements-academic-leadership-and-excellence-in-teaching/_jcr_content/parsys/image.img.jpg/1637704320672.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,13 +71,11 @@
     margin-top:15%;
 }
 
-.forgot__password{
-    margin-top:50px;
-}
+
 
 .create__account{
     text-align:end;
-    margin-bottom:10%;
+    margin-bottom:5%;
 }
 
 .create__account a{
