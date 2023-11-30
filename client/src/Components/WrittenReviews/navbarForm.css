@@ -10,8 +10,6 @@
 }
 
 
-
-
 .form {
   max-width: 400px;
   margin: 10% auto;
@@ -65,8 +63,7 @@ hr {
 }
 
 .review__title{
-  
-  background-color: #912338;
+  background-color: #0073CE;
 }
 
 .review__title h1{

@@ -33,7 +33,7 @@
     margin-top: 45px;
     padding:10px;
     text-align: center;
-    background-color: #912338;
+    background-color: #0073CE;
     color:#fff;
     font-family: 'Lato'
 }
@@ -47,7 +47,7 @@
 
 .login__button{
     color: white!important;
-    background-color: black;
+    background-color: #0073CE;
     font-family: 'Montserrat';
   
 }

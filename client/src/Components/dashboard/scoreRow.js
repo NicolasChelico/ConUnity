@@ -7,13 +7,11 @@ import './scoreRow.css'
 const ScoreRow = props =>{
 
     return(
-        <div className="row holder__row">
-            <div className=" col-lg-6" >      
-                <span className="score__title">{props.title}  </span>
-            </div>     
-            <div className="col-lg-6">
-                    <span className="score__number">{props.score} /5 </span>
-            </div>
+        <div className="row__holder">
+                <h4>{props.title}</h4>
+                <div className="score__number">
+                        <p>{props.score}</p>
+                </div>
         </div>
         
     )

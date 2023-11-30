@@ -36,14 +36,18 @@ const CourseReview = (props) => {
         }
         fetchReviews();      
     },[courseID])
-
+    console.log(review.length)
     return(
         <div className="row top__section" >
             <div className="courses__hero">
-
+                    <div className='course__code'>
+                        <h1>{courseCode}</h1>
+                    </div>
+      
             </div>
 
         <div className="row justify-content-center">
+
         <div className="col-lg-10 justify-content-center dashboard__section">
             <ReviewCard 
                 courseID= {courseID.split(" ").join("")}
@@ -53,7 +57,7 @@ const CourseReview = (props) => {
             />
         </div>
         <div className="col-lg-8">
-            <h1 className="review__title"> Reviews </h1><hr></hr>
+            <h1 className="review__tag"> Reviews </h1>
             {
                 review.length === 0 && (
                  

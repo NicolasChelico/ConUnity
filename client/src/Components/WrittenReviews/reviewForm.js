@@ -44,7 +44,7 @@ const ReviewForm = props => {
     return(
         <div className="row form__card justify-content-center">
             <div className="form">
-                <h2 className='class__title'>Class Review {props.courseCode}</h2>
+                <h2 className='class__title'>Review {props.courseCode}</h2>
                 <input type="number" placeholder='Exam Rating' onChange={handleChange} name='examRating'/>
                 <input type="number" placeholder='Assignment Rating' onChange={handleChange} name='assRating'/>
                 <input type="number" placeholder='Overall Rating' onChange={handleChange} name='contentRating'/>

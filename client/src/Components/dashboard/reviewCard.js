@@ -21,34 +21,33 @@ const ReviewCard = props => {
         fetchCourseInfo();
     },[courseID])
  
-   
+//    const {}
 
 
     return (
-        <div className="row dashboard__main">    
-            <div className="col-lg-6"> 
-                <h1>{props.courseCode}</h1>
+        <div className="container">
+            <div className="row justify-content-center dashboard__main">   
+               {/* <div className="col-lg-6 total__reviews">
+                    <h4> Total reviews:  {props.totalReviews} <span className="review__button"><Link to={`/Review/${props.courseCode}/${props.courseID}`}><button className="btn review__me"> Review me!</button></Link></span></h4> 
+                </div> */}
+
+                <div className="col-lg-6 holders course__description">
+                    <h1>OVERVIEW</h1>
+                    <p>{props.courseDescription}</p>
+                    <Link to={`/Review/${props.courseCode}/${props.courseID}`}><button className="review__me"> Review me!</button></Link>
+                </div>
+                <div className="col-lg-6 holders ">
+                    <ScoringSection 
+                            examScore={props.examScore} 
+                            assignmentScore={props.assignmentScore} 
+                            overallScore={props.overallScore}
+                            totalReviews = {props.totalReviews}
+                    />
+                    <div>
+                    
+                    </div>       
+                </div>            
             </div>
-            <div className="col-lg-6 total__reviews">
-                <h4> Total reviews:  {props.totalReviews} <span className="review__button"><Link to={`/Review/${props.courseCode}/${props.courseID}`}><button className="btn review__me"> Review me!</button></Link></span></h4> 
-            </div>
-            <div className="col-lg-6">
-                
-            </div>
-            <hr></hr>
-            <div className="col-lg-6 course__description">
-                <p>Description</p>
-                <p>{props.courseDescription}</p>
-            </div>
-            <div className="col-lg-6">
-                <ScoringSection 
-                        examScore={props.examScore} 
-                        assignmentScore={props.assignmentScore} 
-                        overallScore={props.overallScore}
-                />       
-            </div>
-            
-           
         </div>
     )
 }

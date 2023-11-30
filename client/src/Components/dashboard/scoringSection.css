@@ -1,0 +1,31 @@
+.rating__title{
+    text-align: start;
+    font-family: 'Montserrat';
+    color:#912338;
+    font-size:32px
+}
+
+.ratings__parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ratings__parent p{
+    color: #912338;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.number__reviews{
+    text-align: end;
+    color: #000;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

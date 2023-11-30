@@ -1,5 +1,10 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:wght@700&family=Raleway:wght@700&display=swap');
+
+
 .dashboard__main{
-    width:100%;
+    /* width:1100px!important; */
+    
     line-height:2rem;
 }
 
@@ -13,6 +18,26 @@
 
 }
 .review__me{
-    background-color: #e15600;
+    font-family: 'Inter';
+    font-weight: bold;
+    background-color: #912338;
     color:white;
+    border:none;
+    margin-top:2%;
+    padding:5px 45px;
+}
+.holders{
+    margin:2% 0;
+}
+
+.course__description h1{
+    font-size:32px;
+    text-align: start;
+    font-family: 'Montserrat';
+    color:#912338;
+    margin-bottom:17px!important;
+}
+
+.course__description p{
+    justify-content: center;
 }

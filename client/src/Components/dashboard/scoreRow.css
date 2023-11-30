@@ -4,13 +4,36 @@
 }
 
 .score__number{
-    background-color: black;
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
     color:white;
-    padding: 30px 40px;
-    z-index: 5;
-    margin-left:50px;
+    padding: 8px 20px;    
+    border-radius: 3.33px;
 }
 
+.score__number p{
+    color:#912338;
+    font-family: 'Montserrat';
+    font-size:28px;
+}
 .holder__row{  
     padding:25px;
+}
+
+.row__holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: fit-content;
+    margin:10px 0;
+}
+.row__holder h4{
+    color: #7E7E7E;
+font-family: 'Montserrat';
+font-size: 21.333px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
 }
