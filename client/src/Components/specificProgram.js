@@ -59,7 +59,7 @@ const SpecificProgram = (props) => {
         <div>
             <div className="background__hero">
                     <div className='row mission__statement'>
-                        <h1>Mission Statement</h1>
+                        <h1>ConUnity</h1>
                     </div>
             </div>
             <div className="program__holder__name">

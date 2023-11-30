@@ -5,11 +5,11 @@
 .background__hero{
     width: 100%;
     height: 450px;
-    background-image: url('https://live.staticflickr.com/5006/5279916243_96267b8e32_b.jpg');
+    background-image: url('./pictures/concordiaHero.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: brightness(50%);
+  
     box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
 
 }
