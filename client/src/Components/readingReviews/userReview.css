@@ -126,11 +126,13 @@
 }
 
 .first-button{
-  background-color: #14B806;
+  background-color: #912338;
   color:#fff;
 }
 .second-button{
-  background-color: #B82606;
+  background-color: #fff;
+  color:#000;
+  border: 1px solid #000;
 }
 .is__accurate{
   display:flex;

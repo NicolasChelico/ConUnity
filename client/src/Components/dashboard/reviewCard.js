@@ -34,7 +34,7 @@ const ReviewCard = props => {
                 <div className="col-lg-6 holders course__description">
                     <h1>OVERVIEW</h1>
                     <p>{props.courseDescription}</p>
-                    <Link to={`/Review/${props.courseCode}/${props.courseID}`}><button className="review__me"> Review me!</button></Link>
+                    <Link to={`/Review/${props.courseCode}/${props.courseID}`}><button className="review__me"> Leave a Review!</button></Link>
                 </div>
                 <div className="col-lg-6 holders ">
                     <ScoringSection 

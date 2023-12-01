@@ -26,7 +26,7 @@
 }
 
 .mission__statement{
-    padding-top:15%;
+    padding-top:12%;
     z-index: 1000;
 }
 
@@ -35,4 +35,19 @@
     font-size: 96px !important;
     font-family: 'Montserrat';
     font-weight: bold;
+}
+
+.mission__statement p{
+    text-align: center;
+    color:white !important;
+    font-size: 32px !important;
+    font-family: 'Montserrat';
+}
+
+.mission__statement a{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 32px !important;
+    font-family: 'Montserrat';
+    color:#F4bd47;
 }

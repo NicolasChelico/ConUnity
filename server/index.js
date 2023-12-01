@@ -107,6 +107,30 @@ app.post("/Review/:courseCode/:courseID" , (req,res) => {
 })
 
 
+// Create a new user
+app.post("/CreateAccount/NewUser", (req,res) => {
+    const q = "INSERT INTO User (`userName`,`password`) VALUES(?)";
+    const values =[
+        req.body.username,
+        req.body.password
+    ]
+    db.query(q,[values], (err,data) => {
+        if(err) return res.json(err);
+        return res.json('User was successfully created');
+    })
+})
+
+app.get("/LoginAuthentication/:userName/:password", (req,res) => {
+    const userName = req.params.userName;
+    const password= req.params.password;
+     const q = "SELECT DISTINCT u.userName, u.password FROM User u WHERE u.userName = ? AND u.password = ?";
+     db.query(q, [userName,password], (err,data) => {
+        if(err)return res.json(err)
+        return res.json(data)
+     })
+})
+
+
 app.listen(8801, () => {
     console.log("Connected to the backend")
 })

@@ -1,6 +1,6 @@
 import { React , useState} from "react";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 import './createAccount.css'
 
 
@@ -9,7 +9,7 @@ export const CreateAccount = () => {
     const navigate = useNavigate();
     const [error, setError] = useState(false)
     const [newUser, setNewUser] = useState({
-        email: '',
+        username: '',
         password:'',
         confirm: ''
     })
@@ -21,20 +21,28 @@ export const CreateAccount = () => {
         console.log(newUser)
     }
 
-    const handleClick =  e => {
+    const handleClick =  async e => {
         e.preventDefault()
-        if(newUser.password !== newUser.confirm){
+        if(newUser.password !== newUser.confirm || newUser.password === '' || newUser.username === ''){
             alert('Wrong information provided.')
-            
             setError(true)
         }
         else{
+            
+            try{
+                await axios.post('http://localhost:8801/CreateAccount/NewUser', newUser)
+
+            }catch(err){
+                console.error(err)
+            }
             console.log(newUser)
             alert("Account successfully created !")
-            navigate("/",{state: "Hwllo"})
 
+            navigate("/",{state: "Hwllo"})
             }
         }
+
+        
     return(
         <div className="account__body">
             <div className="row justify-content-center account__row">
@@ -45,7 +53,7 @@ export const CreateAccount = () => {
                         <h5>Create an Account</h5>
                         <p>Please input your information</p>
                         <label>Email</label>
-                        <input type="text" onChange={handleChange} name="email"/>
+                        <input type="text" onChange={handleChange} name="username"/>
                         <label>Password</label>
                         <input type="password" onChange={handleChange} name="password"/>
                         <label>Confirm Password</label>

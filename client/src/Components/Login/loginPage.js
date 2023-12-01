@@ -1,40 +1,59 @@
-import {React , useState} from "react";
+import {React , useEffect, useState} from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import './loginPage.css'
+import axios from "axios";
 
 
 const LoginPage = () => {
     const navigate = useNavigate()
+    const [searchUser, setSearchUser] = useState([])
     const dummy = {
-        email: 'user',
+        userName: 'user',
         password: 'soen357'
     }
     const [properLogin, setProperLogin] = useState(true)
     const [user, setUser] = useState({
-        email:'',
+        userName:'',
         password:''
     })
 
 
-    const handleChange = (e) =>{
-        setUser(prev => ({...prev, [e.target.name]:e.target.value}));
-        console.log(user)
-     }
+  
 
-     const handleClick = e => {
+
+ const handleChange = (e) =>{
+    setUser(prev => ({...prev, [e.target.name]:e.target.value}));
+    console.log(user)
+}
+
+   console.log(searchUser , ' from db')
+  
+    const fetchUserInfo = async () => {
+            try{
+                const res = await axios.get(`http://localhost:8801/LoginAuthentication/${user.userName}/${user.password}`);
+                setSearchUser(res.data)
+            }catch(err){
+                console.error(err)
+            }
+        }
+
+        const handleClick = async e => {
             e.preventDefault();
-
+           
             if(user.email !== dummy.email && user.password !== dummy.password){
                 alert("Please enter the proper information")
                 setProperLogin(false);
             }
-            
+        
             else{
+                await fetchUserInfo();
                 
-                navigate("/ReviewCourse")};
-     }
+                console.log(searchUser)
+                // navigate("/ReviewCourse")
+            };
+        }
 
-
+    
     return(
        <div className="login__body">
         <div className="row justify-content-center login__row">
@@ -45,7 +64,7 @@ const LoginPage = () => {
                     <h5>Login</h5>
                     <p>Please input your information</p>
                     <label>Email</label>
-                    <input type="text" onChange={handleChange} name="email"/>
+                    <input type="text" onChange={handleChange} name="userName"/>
                     <label>Password</label>
                     <input type="password" onChange={handleChange} name="password"/>
                     <div className="create__account"><Link to="/CreateAccount">Create account</Link></div>

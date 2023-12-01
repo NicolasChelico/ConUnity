@@ -39,6 +39,7 @@ const Home = () => {
          <div className="background__hero">
                     <div className='row mission__statement'>
                         <h1>ConUnity</h1>
+                        <p>New here, <Link to="/CreateAccount">Sign Up!</Link></p>
                     </div>
             </div>
             <div className = "container main__area"> 

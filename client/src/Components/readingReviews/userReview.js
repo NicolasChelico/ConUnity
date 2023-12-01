@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 
 import './userReview.css'
 import ScoreRow from "../dashboard/scoreRow";
@@ -7,6 +7,14 @@ import { FaRegThumbsDown } from "react-icons/fa";
 
 const UserReview = props =>{
 
+    const [numberLikes, setNumberLikes] = useState(0)
+    
+    const handleClickUp = (e) => {
+        e.preventDefault();
+        const number = parseInt(e.target.textContent.trim())+1;
+        setNumberLikes(number)
+    }
+    
     return(
     <div className="row justify-content-center user__card">
         
@@ -49,10 +57,10 @@ const UserReview = props =>{
                     <h5>Is This Review Accurate ?</h5>
                 </div>
             <div className="col-lg-4 accurate">
-                <p className="first-button">Accurate</p>
+                <p className="first-button" name="totalLikes" onClick={handleClickUp}><FaRegThumbsUp/> {numberLikes}</p>
             </div>  
             <div className="col-lg-4 ">
-               <p className="second-button"> Innacurate</p>
+               <p className="second-button" > <FaRegThumbsDown/>(3)</p>
             </div> 
             </div>
           
