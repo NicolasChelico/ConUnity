@@ -3,7 +3,7 @@
 
 .login__body{
     background: #912338;
-    height:825px;
+    height:100vh;
 }
 .login__row{
    padding-top:10% !important;
