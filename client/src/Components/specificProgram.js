@@ -27,7 +27,7 @@ const SpecificProgram = (props) => {
         }
         fetchProgram();
     }
-    , [])
+    , [id])
 
     useEffect(() => {
         const fetchClasses = async () =>{
