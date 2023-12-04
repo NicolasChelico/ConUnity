@@ -13,16 +13,7 @@ const CourseReview = (props) => {
     const [courseInfo, setCourseInfo] = useState([]);
     const [isCourseInfoFetched, setCourseInfoFetched] = useState(false);
     
-
-   
-    const users = [{
-        userID:'1',
-        userName:'nicolaschelico',
-        password:'soen357'
-    }]
-
     
-
     const fetchCourseInfo = async () => {
         try{
             const res = await axios.get(`http://localhost:8801/CourseInfo/${courseID}`);

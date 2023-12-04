@@ -40,21 +40,22 @@ const LoginPage = () => {
         const handleClick = async e => {
             e.preventDefault();
            
-            if(user.email !== dummy.email && user.password !== dummy.password){
+            if(user.email !== dummy.email || user.password !== dummy.password){
                 alert("Please enter the proper information")
                 setProperLogin(false);
             }
-            else if(user.email === "" || user.password === ''){
-                    alert('Please Enter all fields');
-                    setProperLogin(false);
-            }
+            // else if(user.email === "" || user.password === ''){
+            //         alert('Please Enter all fields');
+            //         setProperLogin(false);
+            // }
         
-            else{
-                await fetchUserInfo();
+            // else{
+            //     await fetchUserInfo();
                 
-                console.log(searchUser)
-                // navigate("/ReviewCourse")
-            };
+            //     console.log(searchUser)
+            //     alert('Successfully logged in!')
+            //     navigate("/ReviewCourse")
+            // };
         }
 
     

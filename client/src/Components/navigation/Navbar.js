@@ -23,7 +23,8 @@ const Navbar = (props) => {
                 </div>
                 <div className="col-lg-8">
                     <ul className="nav__links">
-                        <Link to="/"><li>HOME</li></Link>                
+                        <Link to="/"><li>HOME</li></Link>
+                                      
                         <Link to="/Login"><li>LOGIN</li></Link>
                         <Link to="/ReviewCourse"><li style={{color:'#F4bd47'}}> REVIEW</li></Link> 
                     </ul>

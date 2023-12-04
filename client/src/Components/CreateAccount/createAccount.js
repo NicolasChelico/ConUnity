@@ -54,7 +54,7 @@ export const CreateAccount = () => {
                         <p>Please input your information</p>
                         <form>
                             <label>Email</label>
-                            <input type="text" onChange={handleChange} name="username" required/>
+                            <input type="email" onChange={handleChange} name="username" required/>
                             <label>Password</label>
                             <input type="password" onChange={handleChange} name="password" required/>
                             <label>Confirm Password</label>

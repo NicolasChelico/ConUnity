@@ -5,9 +5,9 @@ import cors from "cors"
 const app = express()
 
 const db = mysql.createConnection( {
-    host: 'localhost',
-    user: 'root',
-    password: 'Hockeys9@',
+    host: 'conunity.cnf1ohaicmy9.us-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'Conunity357',
     database: 'ConUnity'
 })
 

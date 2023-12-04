@@ -6,10 +6,9 @@ import './programCard.css'
 
 
 const ProgramCard = props => {
-    const style={
+    const style= {
         width:'250px',
         height:'200px'
-        // backgroundImage: "url('https://unsplash.com/photos/blue-and-silver-industrial-machine-nyAzMQ6Ejgs')"
     }
 
     return (
