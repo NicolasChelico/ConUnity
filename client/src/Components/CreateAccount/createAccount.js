@@ -52,16 +52,18 @@ export const CreateAccount = () => {
                     <div className="col-lg-10 account__login">
                         <h5>Create an Account</h5>
                         <p>Please input your information</p>
-                        <label>Email</label>
-                        <input type="text" onChange={handleChange} name="username"/>
-                        <label>Password</label>
-                        <input type="password" onChange={handleChange} name="password"/>
-                        <label>Confirm Password</label>
-                        <input type="password" onChange={handleChange} name="confirm"/>
-                        {
-                            error && (<p style={{color:'red'}}>Wrong password combination. </p>)
-                        }
-                        <button className="btn account__button" onClick={handleClick}>Create Account</button>
+                        <form>
+                            <label>Email</label>
+                            <input type="text" onChange={handleChange} name="username" required/>
+                            <label>Password</label>
+                            <input type="password" onChange={handleChange} name="password" required/>
+                            <label>Confirm Password</label>
+                            <input type="password" onChange={handleChange} name="confirm" required/>
+                            {
+                                error && (<p style={{color:'red'}}>Wrong password combination. </p>)
+                            }
+                            <button  className="btn account__button" onClick={handleClick}>Create Account</button>
+                        </form>
                     </div>
                   
                 </div>

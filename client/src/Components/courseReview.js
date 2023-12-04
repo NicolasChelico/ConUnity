@@ -1,5 +1,5 @@
 import { React , useState, useEffect} from "react";
-import { Link, useParams, useLocation} from 'react-router-dom';
+import { useParams, useLocation} from 'react-router-dom';
 import axios from "axios";
 
 import './courseReview.css'
@@ -10,7 +10,8 @@ import UserReview from "./readingReviews/userReview";
 const CourseReview = (props) => {
     const {courseID, id}  = useParams()
     const [review, setReviews] = useState([])
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [courseInfo, setCourseInfo] = useState([]);
+    const [isCourseInfoFetched, setCourseInfoFetched] = useState(false);
     
 
    
@@ -20,10 +21,26 @@ const CourseReview = (props) => {
         password:'soen357'
     }]
 
-    const location = useLocation()
-   
-    const { courseCode , courseDescription} = location.state
- 
+    
+
+    const fetchCourseInfo = async () => {
+        try{
+            const res = await axios.get(`http://localhost:8801/CourseInfo/${courseID}`);
+            setCourseInfo(res.data);
+            setCourseInfoFetched(true)
+        }catch(err){
+            console.error(err)
+        }
+    }
+    
+    useEffect(() => {
+        if(!isCourseInfoFetched){
+        fetchCourseInfo()
+        }
+    },[])
+
+    console.log(courseInfo,  ' is course info')
+
 
     useEffect(() => {
         const fetchReviews = async () =>{
@@ -35,15 +52,14 @@ const CourseReview = (props) => {
             }
         }
         fetchReviews();      
-    },[courseID])
-    console.log(review)
-
+    },[])
+    
 
     return(
         <div className="row top__section" >
             <div className="courses__hero">
                     <div className='course__code'>
-                        <h1>{courseCode}</h1>
+                        {courseInfo.map((c) => {return <h1>{c.courseCode}</h1>})}
                     </div>
       
             </div>
@@ -53,10 +69,9 @@ const CourseReview = (props) => {
         <div className="col-lg-10 justify-content-center dashboard__section">
             <ReviewCard 
                 courseID= {courseID.split(" ").join("")}
-                courseCode={courseCode}
                 totalReviews={review.length}
-                courseDescription={courseDescription}
             />
+ 
         </div>
         <div className="col-lg-8">
             <h1 className="review__tag"> Reviews </h1>

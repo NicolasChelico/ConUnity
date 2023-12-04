@@ -1,4 +1,4 @@
-import {React , useEffect, useState} from "react";
+import {React , useState} from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import './loginPage.css'
 import axios from "axios";
@@ -44,6 +44,10 @@ const LoginPage = () => {
                 alert("Please enter the proper information")
                 setProperLogin(false);
             }
+            else if(user.email === "" || user.password === ''){
+                    alert('Please Enter all fields');
+                    setProperLogin(false);
+            }
         
             else{
                 await fetchUserInfo();
@@ -64,12 +68,12 @@ const LoginPage = () => {
                     <h5>Login</h5>
                     <p>Please input your information</p>
                     <label>Email</label>
-                    <input type="text" onChange={handleChange} name="userName"/>
+                    <input type="text" onChange={handleChange} required name="userName"/>
                     <label>Password</label>
-                    <input type="password" onChange={handleChange} name="password"/>
+                    <input type="password" onChange={handleChange} required name="password"/>
                     <div className="create__account"><Link to="/CreateAccount">Create account</Link></div>
                     {!properLogin && (
-                        <p style={{color:'red'}}>Wrong credentials.</p>
+                        <p style={{color:'red'}}>A problem occured. Please verify all fields.</p>
                     )}
                     <button className="btn login__button" onClick={handleClick}>Login</button>
                 </div>

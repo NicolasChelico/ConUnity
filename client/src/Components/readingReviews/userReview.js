@@ -60,7 +60,7 @@ const UserReview = props =>{
                 <p className="first-button" name="totalLikes" onClick={handleClickUp}><FaRegThumbsUp/> {numberLikes}</p>
             </div>  
             <div className="col-lg-4 ">
-               <p className="second-button" > <FaRegThumbsDown/>(3)</p>
+               <p className="second-button" > <FaRegThumbsDown/>3</p>
             </div> 
             </div>
           

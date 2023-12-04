@@ -21,20 +21,23 @@ const ReviewCard = props => {
         fetchCourseInfo();
     },[courseID])
  
-//    const {}
+console.log(courseInfo , 'this is from the other side')
 
 
     return (
         <div className="container">
             <div className="row justify-content-center dashboard__main">   
-               {/* <div className="col-lg-6 total__reviews">
-                    <h4> Total reviews:  {props.totalReviews} <span className="review__button"><Link to={`/Review/${props.courseCode}/${props.courseID}`}><button className="btn review__me"> Review me!</button></Link></span></h4> 
-                </div> */}
-
                 <div className="col-lg-6 holders course__description">
                     <h1>OVERVIEW</h1>
-                    <p>{props.courseDescription}</p>
-                    <Link to={`/Review/${props.courseCode}/${props.courseID}`}><button className="review__me"> Leave a Review!</button></Link>
+                    {
+                        courseInfo.map((c) => {return (
+                        <>
+                            <p>{c.description}</p>
+                            <Link to={`/Review/${c.courseCode}/${props.courseID}`}><button className="review__me"> Leave a Review!</button></Link>
+                        </>
+                        )})                     
+                    }
+    
                 </div>
                 <div className="col-lg-6 holders ">
                     <ScoringSection 
